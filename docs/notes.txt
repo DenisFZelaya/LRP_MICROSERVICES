@@ -1,3 +1,13 @@
 https://github.com/dotnet-architecture/eShopOnContainersAI
 
-test add
+La arquitectura n-capas se refiere a la separación de la lógica de la aplicación en diferentes capas para mantener una estructura clara y escalable. En el caso de .NET Core, la arquitectura n-capas se puede dividir en las siguientes capas:
+
+Capa de presentación: Es la capa en la que se encuentra la interfaz de usuario y se encarga de interactuar con el usuario final. En esta capa se encuentran los controladores y las vistas.
+
+Capa de aplicación: Es la capa que se encarga de la lógica de negocio de la aplicación. Aquí se encuentran los servicios, que son los encargados de implementar los casos de uso de la aplicación.
+
+Capa de dominio: Es la capa en la que se encuentran las entidades de la aplicación, los objetos de valor y las interfaces de los repositorios.
+
+Capa de infraestructura: Es la capa en la que se encuentran las implementaciones concretas de los repositorios, los servicios y otros componentes de la aplicación. También se encuentran aquí las implementaciones de las interfaces de persistencia, como por ejemplo la base de datos.
+
+En general, la arquitectura n-capas permite una mayor modularidad, flexibilidad y escalabilidad en las aplicaciones. Al separar la lógica de negocio en diferentes capas, se puede actualizar, modificar y mejorar cada capa por separado sin afectar a las demás capas. Además, esta arquitectura permite una mejor separación de responsabilidades y una mayor facilidad para realizar pruebas unitarias.
