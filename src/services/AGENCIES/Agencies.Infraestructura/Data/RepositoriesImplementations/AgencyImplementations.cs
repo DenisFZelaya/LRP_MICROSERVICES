@@ -1,6 +1,7 @@
 ﻿
 using Agencies.Infraestructura.Context;
 using Agencies.Infraestructura.Data.Entities;
+using Agencies.Infraestructura.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Agencies.Infraestructura.Data.RepositoriesImplementations
 {
-    public class AgencyImplementations
+    public class AgencyImplementations : IAgencyRepository
     {
         private readonly AGENCIESContext _dbContext;
 
