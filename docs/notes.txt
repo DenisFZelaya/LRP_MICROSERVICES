@@ -11,3 +11,25 @@ Capa de dominio: Es la capa en la que se encuentran las entidades de la aplicaci
 Capa de infraestructura: Es la capa en la que se encuentran las implementaciones concretas de los repositorios, los servicios y otros componentes de la aplicación. También se encuentran aquí las implementaciones de las interfaces de persistencia, como por ejemplo la base de datos.
 
 En general, la arquitectura n-capas permite una mayor modularidad, flexibilidad y escalabilidad en las aplicaciones. Al separar la lógica de negocio en diferentes capas, se puede actualizar, modificar y mejorar cada capa por separado sin afectar a las demás capas. Además, esta arquitectura permite una mejor separación de responsabilidades y una mayor facilidad para realizar pruebas unitarias.
+
+Capa de Presentación: 
+	Es la capa encargada de la interfaz de usuario y la interacción con el usuario final.
+
+Capa de Aplicación: 
+	Es la capa encargada de la lógica de negocio de la aplicación.
+
+Capa de Dominio: 
+	Es la capa en la que se encuentran las entidades de la aplicación, los objetos de valor y las interfaces de los repositorios.
+
+Capa de Infraestructura: 
+	Es la capa en la que se encuentran las implementaciones concretas de los repositorios, 
+	los servicios y otros componentes de la aplicación. También se encuentran aquí las implementaciones de las interfaces de persistencia,
+	como por ejemplo la base de datos.
+
+	Flujo
+
+	PETICION HTTP 
+	-> CAPA PRESENTACION(Controlador) Recibe y procesa los datos
+	-> Controlador: Llama si necesita la capa de dominio - contiene las interfaces, hace validaciones
+	-> CAPA APLICACION  utiliza los repos de la capa de infraestructura para realizar
+	-> CAPA INFRAESTRUCTURA : devuelve los resultados al servicio de la capa de aplicación, que a su vez los devuelve al controlador.
