@@ -32,11 +32,6 @@ namespace Agencies.API.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Agencias>(entity =>
-            {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-            });
-
             OnModelCreatingPartial(modelBuilder);
         }
 

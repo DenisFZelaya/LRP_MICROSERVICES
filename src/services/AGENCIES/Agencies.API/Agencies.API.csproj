@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -28,16 +28,14 @@
   <ItemGroup>
     <Folder Include="Configuraciones\" />
     <Folder Include="Data\" />
-    <Folder Include="Dtos\Response\" />
-    <Folder Include="Dtos\Request\" />
     <Folder Include="Grpc\" />
     <Folder Include="Models\" />
     <Folder Include="Infraestructura\ActionResults\" />
     <Folder Include="Infraestructura\Filters\" />
     <Folder Include="Infraestructura\Middlewares\" />
-    <Folder Include="Infraestructura\Repositories\" />
     <Folder Include="IntegracionEventos\EventHandling\" />
     <Folder Include="IntegracionEventos\Events\" />
+    <Folder Include="Aplicacion\" />
     <Folder Include="Services\" />
     <Folder Include="Proto\" />
   </ItemGroup>

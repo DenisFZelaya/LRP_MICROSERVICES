@@ -1,4 +1,6 @@
 ﻿using Agencies.API.Data;
+using Agencies.API.Infraestructura.Repositories;
+using Microsoft.DotNet.Scaffolding.Shared.ProjectModel;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +21,9 @@ builder.Services.AddEntityFrameworkSqlServer()
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("AgenciesContext"));
 });
+
+// Agregar interfaces
+builder.Services.AddScoped<IAgenciesService, AgenciesService>();
 
 
 
