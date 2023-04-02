@@ -25,8 +25,6 @@ builder.Services.AddEntityFrameworkSqlServer()
 // Agregar interfaces
 builder.Services.AddScoped<IAgenciesService, AgenciesService>();
 
-
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

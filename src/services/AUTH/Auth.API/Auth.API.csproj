@@ -14,4 +14,11 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Dta\" />
+    <Folder Include="Infraestructura\ActionResults\" />
+    <Folder Include="Models\" />
+    <Folder Include="Grpc\" />
+  </ItemGroup>
+
 </Project>

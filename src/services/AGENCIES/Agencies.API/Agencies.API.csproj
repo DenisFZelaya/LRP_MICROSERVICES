@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.7">
       <PrivateAssets>all</PrivateAssets>
@@ -29,10 +30,9 @@
     <Folder Include="Configuraciones\" />
     <Folder Include="Data\" />
     <Folder Include="Grpc\" />
+    <Folder Include="Infraestructura\Middlewares\" />
     <Folder Include="Models\" />
     <Folder Include="Infraestructura\ActionResults\" />
-    <Folder Include="Infraestructura\Filters\" />
-    <Folder Include="Infraestructura\Middlewares\" />
     <Folder Include="IntegracionEventos\EventHandling\" />
     <Folder Include="IntegracionEventos\Events\" />
     <Folder Include="Aplicacion\" />

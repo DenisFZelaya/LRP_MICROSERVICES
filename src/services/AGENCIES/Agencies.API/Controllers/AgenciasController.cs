@@ -1,14 +1,16 @@
 ﻿using Agencies.API.Data;
 using Agencies.API.Dtos.Request;
 using Agencies.API.Dtos.Response;
+using Agencies.API.Infraestructura.Filters;
 using Agencies.API.Infraestructura.Repositories;
 using Agencies.API.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Agencies.API.Controllers
 {
-    [Route("api/v1/ms-agencies")]
+    [Route("api/v1.0/ms-agencies")]
     [ApiController]
     public class AgenciasController : ControllerBase
     {
@@ -18,9 +20,9 @@ namespace Agencies.API.Controllers
             this._agenciesService = agenciesService;
         }
 
-
         [HttpGet]
-        public async Task<JsonCustomResponse> Get(int? idPais, int? idDepartamento, int? idCiudad, int? limit, int? offset)
+        [AuthorizeMS]
+        public async Task<JsonCustomResponse> Get([FromHeader] string Authorization,int? idPais, int? idDepartamento, int? idCiudad, int? limit, int? offset)
         {
             return await _agenciesService.GetAllAsync(idPais, idDepartamento, idCiudad, limit,offset );
         }
