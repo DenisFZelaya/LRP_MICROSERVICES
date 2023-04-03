@@ -1,0 +1,47 @@
+id (clave primaria, autoincremental)
+timestamp (fecha y hora)
+aplicación (nombre de la aplicación)
+mensaje (descripción del evento o error)
+nivel (severidad del error, como INFO, WARNING o ERROR)
+detalles (información adicional, como la traza de la pila)
+Logs de acceso:
+
+id (clave primaria, autoincremental)
+timestamp (fecha y hora)
+usuario (identificador del usuario)
+dirección IP (dirección IP del usuario)
+recurso (recurso al que accedió el usuario)
+método (método HTTP utilizado, como GET, POST, PUT o DELETE)
+resultado (código de estado HTTP, como 200, 404 o 500)
+Logs de seguridad:
+
+id (clave primaria, autoincremental)
+timestamp (fecha y hora)
+usuario (identificador del usuario)
+dirección IP (dirección IP del usuario)
+evento (tipo de evento de seguridad, como inicio de sesión, cierre de sesión o intento de acceso no autorizado)
+resultado (éxito o fracaso)
+Logs de sistema:
+
+id (clave primaria, autoincremental)
+timestamp (fecha y hora)
+componente (nombre del componente del sistema, como el sistema operativo o un servicio específico)
+mensaje (descripción del evento o error)
+nivel (severidad del error, como INFO, WARNING o ERROR)
+Logs de red:
+
+id (clave primaria, autoincremental)
+timestamp (fecha y hora)
+dirección IP origen (dirección IP de la conexión entrante o saliente)
+dirección IP destino (dirección IP de destino de la conexión)
+puerto origen (puerto de origen de la conexión)
+puerto destino (puerto de destino de la conexión)
+protocolo (protocolo de red utilizado, como TCP o UDP)
+acción (acción realizada, como permitir, bloquear o rechazar)
+Logs de base de datos:
+
+id (clave primaria, autoincremental)
+timestamp (fecha y hora)
+usuario (identificador del usuario que realiza la consulta o transacción)
+consulta (consulta SQL o instrucción ejecutada)
+resultado (éxito o fracaso, junto con cualquier mensaje de error) e incluye la documentacion
