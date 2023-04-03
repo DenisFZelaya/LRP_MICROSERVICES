@@ -31,9 +31,7 @@ namespace Auth.API.Controllers
             JsonCustomResponse response = await _loginService.Login(login);
 
             // Autenticar al usuario
-            /**
-             * 
-             *             bool isUserAuthenticated = true;
+               bool isUserAuthenticated = true;
             string userName = "johndoe";
             string[] roles = { "admin", "user" };
 
@@ -47,11 +45,8 @@ namespace Auth.API.Controllers
                 {
                     ((ClaimsIdentity)User.Identity).AddClaim(new Claim(ClaimTypes.Role, role));
                 }
-                
             }
-             * 
-           */
-
+        
 
             var claimsIdentity = (ClaimsIdentity)User.Identity;
 

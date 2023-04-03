@@ -1,0 +1,69 @@
+﻿{
+   "CodeGenerationMode": 2,
+   "ContextClassName": "LOANSContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": true,
+   "ModelNamespace": null,
+   "OutputContextPath": "Data",
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "Loans.API",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[avales]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[cliente_conyugue]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[clientes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[evaluacion_financiera]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[garantias]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[inventario]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[referencias_personales]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[solicitudes]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "DESKTOP-CSF7EUN\\SQLEXPRESS.LRP_LOANS_MS_DEV",
+   "UncountableWords": null,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDateOnlyTimeOnly": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": false,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false,
+   "UseT4": false
+}
