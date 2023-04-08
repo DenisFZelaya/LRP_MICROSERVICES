@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace Loans.API.Models
+namespace Loans.API.Infraestructure.DBModels
 {
     [Table("referencias_personales")]
     public partial class ReferenciasPersonales
@@ -80,5 +80,7 @@ namespace Loans.API.Models
         [StringLength(255)]
         [Unicode(false)]
         public string CodSolicitud { get; set; }
+        [Column("indice")]
+        public int? Indice { get; set; }
     }
 }

@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace Loans.API.Models
+namespace Loans.API.Infraestructure.DBModels
 {
     [Table("garantias")]
     public partial class Garantias

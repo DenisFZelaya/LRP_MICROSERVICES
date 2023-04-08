@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Loans.API.Infraestructure.DBModels;
 using Loans.API.Data;
-using Loans.API.Models;
 
-namespace Loans.API.Controllers
+namespace Loans.API.Presentation.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -23,12 +23,12 @@ namespace Loans.API.Controllers
 
         // GET: api/ClienteConyugues
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ClienteConyugue>>> GetClienteConyugue()
+        public async Task<object> GetClienteConyugue()
         {
-          if (_context.ClienteConyugue == null)
-          {
-              return NotFound();
-          }
+            if (_context.ClienteConyugue == null)
+            {
+                return NotFound();
+            }
             return await _context.ClienteConyugue.ToListAsync();
         }
 
@@ -36,10 +36,10 @@ namespace Loans.API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<ClienteConyugue>> GetClienteConyugue(int id)
         {
-          if (_context.ClienteConyugue == null)
-          {
-              return NotFound();
-          }
+            if (_context.ClienteConyugue == null)
+            {
+                return NotFound();
+            }
             var clienteConyugue = await _context.ClienteConyugue.FindAsync(id);
 
             if (clienteConyugue == null)
@@ -84,12 +84,12 @@ namespace Loans.API.Controllers
         // POST: api/ClienteConyugues
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<ClienteConyugue>> PostClienteConyugue(ClienteConyugue clienteConyugue)
+        public async Task<object> PostClienteConyugue(ClienteConyugue clienteConyugue)
         {
-          if (_context.ClienteConyugue == null)
-          {
-              return Problem("Entity set 'LOANSContext.ClienteConyugue'  is null.");
-          }
+            if (_context.ClienteConyugue == null)
+            {
+                return Problem("Entity set 'LOANSContext.ClienteConyugue'  is null.");
+            }
             _context.ClienteConyugue.Add(clienteConyugue);
             await _context.SaveChangesAsync();
 

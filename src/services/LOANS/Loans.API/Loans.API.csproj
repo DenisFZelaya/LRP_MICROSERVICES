@@ -21,8 +21,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="Data\" />
+    <Folder Include="Aplication\Dtos\Request\" />
+    <Folder Include="Aplication\UsesCases\" />
+    <Folder Include="Domain\Entities\" />
+    <Folder Include="Domain\Eventos\" />
+    <Folder Include="Domain\Excepciones\" />
+    <Folder Include="Domain\ValueObjects\" />
+    <Folder Include="Infraestructure\Config\" />
+    <Folder Include="Infraestructure\DBModels\" />
+    <Folder Include="Presentation\Middlewares\" />
+    <Folder Include="Presentation\Routes\" />
   </ItemGroup>
 
 </Project>

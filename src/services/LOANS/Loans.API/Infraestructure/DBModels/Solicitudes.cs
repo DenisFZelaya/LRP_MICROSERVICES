@@ -6,9 +6,10 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace Loans.API.Models
+namespace Loans.API.Infraestructure.DBModels
 {
     [Table("solicitudes")]
+    [Index("CodSolicitud", Name = "IX_solicitudes", IsUnique = true)]
     public partial class Solicitudes
     {
         [Key]
@@ -18,6 +19,7 @@ namespace Loans.API.Models
         [StringLength(255)]
         [Unicode(false)]
         public string IdHash { get; set; }
+        [Required]
         [Column("codSolicitud")]
         [StringLength(255)]
         [Unicode(false)]
@@ -26,10 +28,10 @@ namespace Loans.API.Models
         [StringLength(255)]
         [Unicode(false)]
         public string CodAgencia { get; set; }
-        [Column("codCliente")]
+        [Column("cedulaCliente")]
         [StringLength(255)]
         [Unicode(false)]
-        public string CodCliente { get; set; }
+        public string CedulaCliente { get; set; }
         [Column("carnetImprema")]
         [StringLength(255)]
         [Unicode(false)]

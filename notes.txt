@@ -1,0 +1,10 @@
+Capa	Archivo/Estructura	Descripción
+Presentación	controllers	Archivos que contienen las funciones que manejan las peticiones HTTP entrantes y envían las respuestas HTTP correspondientes.
+routes	Archivos que definen las rutas que el microservicio soporta y asignan cada ruta a la función correspondiente en el controlador.
+middleware	Archivos que contienen funciones que se ejecutan antes o después de las funciones del controlador y se utilizan para realizar acciones comunes en múltiples rutas, como la validación de autenticación o la validación de entrada.
+Infraestructura	data_access	Archivos que contienen funciones que interactúan con la base de datos, como consultas SQL, operaciones CRUD y funciones de mapeo de objetos.
+config	Archivos que contienen configuraciones para el microservicio, como las credenciales de la base de datos, las claves de API y las variables de entorno.
+Dominio	models	Archivos que definen los modelos de datos que se utilizan en el microservicio, como las clases de usuario o las clases de productos.
+services	Archivos que contienen funciones que encapsulan la lógica de negocio del microservicio y utilizan los modelos de datos y las funciones de acceso a datos para proporcionar una funcionalidad coherente.
+Aplicación	app.js	Archivo principal que inicializa y configura el servidor del microservicio y que importa y utiliza los archivos de las otras capas.
+package.json	Archivo que contiene la información del proyecto y las dependencias del microservicio.

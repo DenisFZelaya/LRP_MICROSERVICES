@@ -2,9 +2,9 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using Loans.API.Infraestructure.DBModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Loans.API.Models;
 
 namespace Loans.API.Data
 {

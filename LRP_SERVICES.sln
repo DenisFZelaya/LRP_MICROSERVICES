@@ -12,6 +12,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auth.API", "src\services\AUTH\Auth.API\Auth.API.csproj", "{8DD22760-916F-4522-B6DE-0AF2DBB4CD03}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03_Loans", "03_Loans", "{91224E86-C9FD-4D8A-88C7-57C5CB3AAF8A}"
+	ProjectSection(SolutionItems) = preProject
+		notes.txt = notes.txt
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loans.API", "src\services\LOANS\Loans.API\Loans.API.csproj", "{25691358-4F9D-412E-90E5-B249B35F7170}"
 EndProject

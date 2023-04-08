@@ -1,4 +1,6 @@
 using Loans.API.Data;
+using Loans.API.Domain.Interfaces;
+using Loans.API.Domain.Servicios;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +17,8 @@ builder.Services.AddEntityFrameworkSqlServer()
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("LoansContext"));
 });
+
+builder.Services.AddScoped<IRequestDetailsService, RequestDetailsService>();
 
 var app = builder.Build();
 
