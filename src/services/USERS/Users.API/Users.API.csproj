@@ -10,8 +10,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.15">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.13" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Aplication\Dtos\" />
+    <Folder Include="Aplication\UsesCases\" />
+    <Folder Include="Domain\Entities\" />
+    <Folder Include="Domain\Eventos\" />
+    <Folder Include="Domain\Excepciones\" />
+    <Folder Include="Domain\Interfaces\" />
+    <Folder Include="Domain\ValueObjects\" />
+    <Folder Include="Domain\Servicios\" />
+    <Folder Include="Infraestructure\Config\" />
+    <Folder Include="Infraestructure\Context\" />
+    <Folder Include="Infraestructure\DBModels\" />
   </ItemGroup>
 
 </Project>

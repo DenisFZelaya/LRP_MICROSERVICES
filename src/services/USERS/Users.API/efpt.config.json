@@ -1,0 +1,65 @@
+﻿{
+   "CodeGenerationMode": 2,
+   "ContextClassName": "USERSContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": true,
+   "ModelNamespace": null,
+   "OutputContextPath": "Infraestructure\/Context",
+   "OutputPath": "Infraestructure\/DBModels",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "Users.API",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[permisos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[roles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[roles_permisos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[usuario_agencias]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[usuario_foto]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[usuario_roles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[usuarios]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "DESKTOP-CSF7EUN\\SQLEXPRESS.LRP_USERS_MNG_MS_DEV",
+   "UncountableWords": null,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDateOnlyTimeOnly": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": false,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false,
+   "UseT4": false
+}

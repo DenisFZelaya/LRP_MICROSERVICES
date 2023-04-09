@@ -4,24 +4,15 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>c1e943ed-11b0-49d5-9f48-4b3b13317c45</UserSecretsId>
+    <UserSecretsId>d21740cd-f45e-47c0-b74a-a751a15fb6f8</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..\..\..</DockerfileContext>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.14" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Application\UsesCases\" />
-    <Folder Include="Dta\" />
-    <Folder Include="Infraestructura\ActionResults\" />
-    <Folder Include="Infraestructura\Context\" />
-    <Folder Include="Infraestructura\DBModels\" />
-    <Folder Include="Grpc\" />
-    <Folder Include="Domain\" />
   </ItemGroup>
 
 </Project>

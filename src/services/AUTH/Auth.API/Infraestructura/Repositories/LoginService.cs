@@ -1,5 +1,5 @@
-﻿using Auth.API.Dtos.Request;
-using Auth.API.Dtos.Response;
+﻿using Auth.API.Application.Dtos.Request;
+using Auth.API.Application.Dtos.Response;
 
 namespace Auth.API.Infraestructura.Repositories
 {

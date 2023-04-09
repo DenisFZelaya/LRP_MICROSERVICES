@@ -1,4 +1,4 @@
-﻿namespace Auth.API.Dtos.Response
+﻿namespace Auth.API.Application.Dtos.Response
 {
     public class JsonCustomResponse
     {

@@ -1,6 +1,4 @@
-﻿using Auth.API.Dtos.Request;
-using Auth.API.Dtos.Response;
-using Auth.API.Infraestructura.Repositories;
+﻿using Auth.API.Infraestructura.Repositories;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
@@ -10,8 +8,10 @@ using System.Net;
 using System.Security.Claims;
 using System.Data;
 using Microsoft.AspNetCore.Authorization;
+using Auth.API.Application.Dtos.Request;
+using Auth.API.Application.Dtos.Response;
 
-namespace Auth.API.Controllers
+namespace Auth.API.Presentation.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -31,7 +31,7 @@ namespace Auth.API.Controllers
             JsonCustomResponse response = await _loginService.Login(login);
 
             // Autenticar al usuario
-               bool isUserAuthenticated = true;
+            bool isUserAuthenticated = true;
             string userName = "johndoe";
             string[] roles = { "admin", "user" };
 
@@ -46,7 +46,7 @@ namespace Auth.API.Controllers
                     ((ClaimsIdentity)User.Identity).AddClaim(new Claim(ClaimTypes.Role, role));
                 }
             }
-        
+
 
             var claimsIdentity = (ClaimsIdentity)User.Identity;
 
@@ -59,7 +59,7 @@ namespace Auth.API.Controllers
 
             response.Data = new
             {
-                Identity = User.Identity,
+                User.Identity,
                 Claims = claims,
             };
 
