@@ -30,6 +30,7 @@ namespace Auth.API.Presentation.Controllers
         {
             JsonCustomResponse response = await _loginService.Login(login);
 
+            /**
             // Autenticar al usuario
             bool isUserAuthenticated = true;
             string userName = "johndoe";
@@ -62,6 +63,9 @@ namespace Auth.API.Presentation.Controllers
                 User.Identity,
                 Claims = claims,
             };
+             * */
+
+
 
             return response;
         }
