@@ -49,6 +49,31 @@ public class ExampleController : ControllerBase
     }
 
     [AllowAnonymous]
+    [HttpGet("token")]
+    public IActionResult GetToken()
+    {
+        var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"])); // clave secreta para firmar el token
+        var credentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256); // algoritmo de seguridad para firmar el token
+        var claims = new[]
+        {
+            new Claim(JwtRegisteredClaimNames.Sub, "denisfzelaya"),
+            new Claim(JwtRegisteredClaimNames.Email, "denisfzelaya@gmail.com"),
+            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+        }; // claims para incluir en el token
+        var token = new JwtSecurityToken(
+            issuer: _configuration["Jwt:Issuer"],
+            audience: _configuration["Jwt:Issuer"],
+            claims: claims,
+            expires: DateTime.Now.AddMinutes(30),
+            signingCredentials: credentials); // generamos el token
+
+        return Ok(new
+        {
+            access_token = new JwtSecurityTokenHandler().WriteToken(token)
+        }); // devolvemos el token como string
+    }
+
+    [AllowAnonymous]
     [HttpGet("decodedToken")]
     public IActionResult GetDecodedToken(string token)
     {
@@ -68,10 +93,11 @@ public class ExampleController : ControllerBase
             }, out SecurityToken validatedToken);
 
             var jwtToken = (JwtSecurityToken)validatedToken;
+            var email = jwtToken.Claims.First(x => x.Type == "email").Value;
             //var email = jwtToken.Claims.First(x => x.Type == JwtRegisteredClaimNames.Email).Value;
             //var userId = jwtToken.Claims.First(x => x.Type == JwtRegisteredClaimNames.Sub).Value;
 
-            return Ok(new { Claims = jwtToken.Claims });
+            return Ok(new {email = email, Claims = jwtToken.Claims });
         }
         catch (Exception ex)
         {
