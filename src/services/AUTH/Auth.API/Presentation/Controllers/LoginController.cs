@@ -65,8 +65,6 @@ namespace Auth.API.Presentation.Controllers
             };
              * */
 
-
-
             return response;
         }
     }
